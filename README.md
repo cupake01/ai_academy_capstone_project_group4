@@ -1,10 +1,28 @@
 # Ai Academy Capstone Group 4
 Presented by Brian Gorbea, Kelvin Cupay, Robert Cofer, Rob Masters, Ryan Lazar
 
-## Overview
+Created & Consolidated by Kelvin and Brian
+
+## Notebook Structure
+1. Overview
+2. Business Understanding
+* Include stakeholder and key business questions
+3. Data Understanding and Analysis
+* Source of data
+* Description of data
+* Three visualizations (the same visualizations presented in the slides and notebook)
+4. Statisical Communication & Data Analysis
+* Results of statistical inference
+* Interpretation of these results in the context of the problem
+* Hypothesis testing
+5. Conclusion
+* Summary of conclusions including three relevant findings
+* Future Works
+
+# Overview
 Using Explanatory data analysis(EDA) and statistical methods we are going to advice Computing Vision how the best way to jump start their new movie studio, called 'Computing Vision Entertainment'. We used sqlite3 in pandas to query the datasets given and hypothesis testing to evaluate our findings. Essentially, we are generating insights for their business and stake holders by making a two part suggestion, one is the early stage of the movie studio and scalability after several years.
 
-## Business Understanding: 
+# Business Understanding: 
 
 Goals: The business question we are going to answer
 Assumption : The parent company 'Computing Vision' does not have much backgrounk in creating movies.
@@ -15,33 +33,23 @@ This notebook will drive deeper into how we utilize the data sets to create mean
 
 We will also create hypothesis test to evaluate our findings and reccomendations which are based in scietific & mathematical reasonings. The reccomendation for the *head of Computing Vision's new movie studio* and help him decide which films to create the best film in terms of profits and appreciation.
 
-### Real World Application(real-world problem): Today less people are going to the theatres and watching movies. Maybe Hollywood has gone stale and have stagnanted with their ways of creating movies, maybe through insights of what is most profitable for a new and small scale movie studio someone can use this information to create and start their new movie business.REVISIT)
+## Real World Application:
+Today less people are going to the theatres and watching movies. Maybe Hollywood has gone stale and have stagnanted with their ways of creating movies, through our insights of what is most profitable for a new and small scale movie studio someone can use this information to create and start their new movie business. `Note:` that our client is a tech company, this may hinder start-ups.
 
-## Stakeholders:(REVISIT CHECK WITH ROB)
+## Stakeholders:
 - `Investors`: Can identify by profits if rate on investment(ROI) is significant for them to invest in Computing Vision Entertainment
 - `Computing Vision(Parent Company)`: Is it worth it to make 
 - `Critics`: Is this new movie studio just for profits or they actually want to create movies that are well liked
 - `Fans`: Do we like the movies from this mobie studio
 - `Potential future fans`: Repuation of this new in coming movie studio
-- `Competing fans`: How well will this Computing Vision Entertainment handle the competing movie studios
 
-# Middle : Methodology (START)
-* Data Understanding
-    
-* Data Analysis
-    * 3 visualizations
-* Statistical Inference
-
-* Rationale
-    * For example, why are you using hypothesis testing rather than just a graph?
-    * What about the problem or data is suitable for this form of analysis?
-    * For a data science audience, this includes your reasoning for the changes you applied and choices you made while building confidence intervals and/or hypothesis tests.
 
 ## Data Undertanding: 
+#### Description of data:
 The data set comes from several sources where some are compressed into CSV(comma-separated values) or TSV(tab-separated values). The data sets listed below are from these respectable sources: [Box Office Mojo](https://www.boxofficemojo.com/), [IMDB](https://www.imdb.com/), [Rotten Tomatoes](https://www.rottentomatoes.com/), [The MovieDB](https://www.themoviedb.org/), [The Numbers](https://www.the-numbers.com/).
 
 Here is a list of the data sets use:
-- `bom.movie_gross.csv.gz`: each record is a movie with a title(object), domestic_gross(object), foreign_gross(float), and year released(int)
+- `bom.movie_gross.csv.gz`: 
 - `im.db.zip`: 
 - `rt.movie_info.tsv.gz`:
 - `rt.reviews.tsv.gz`:
