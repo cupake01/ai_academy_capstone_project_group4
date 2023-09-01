@@ -1,7 +1,7 @@
 # Ai Academy Capstone Group 4
 Presented by Brian Gorbea, Kelvin Cupay, Robert Cofer, Rob Masters, Ryan Lazar
 
-Created & Consolidated by Kelvin and Brian
+Created & Consolidated by Kelvin, Brian, and Robert
 
 ## Notebook Structure
 1. Overview
@@ -196,7 +196,7 @@ The scope of the task allowed only Exploratory Data Analysis(EDA) and Hypothesis
 
 
 ## PDF'S
-[Presentation](pdf/Top_Quality_Group_Presentation.pdf)
-[Notebook_PDF](pdf/Capstone_Final_Notebook_Group4_Jupyter_Notebook.pdf)
+[Presentation](Top_Quality_Group_Presentation.pdf)
+[Notebook_PDF](Capstone_Final_Notebook_Group4_Jupyter_Notebook.pdf)
 
 # End of Note book: Thank you so much for reading to this point!
