@@ -25,6 +25,18 @@ We will also create hypothesis test to evaluate our findings and reccomendations
 - `Potential future fans`: Repuation of this new in coming movie studio
 - `Competing fans`: How well will this Computing Vision Entertainment handle the competing movie studios
 
+# Middle : Methodology (START)
+* Data Understanding
+    
+* Data Analysis
+    * 3 visualizations
+* Statistical Inference
+
+* Rationale
+    * For example, why are you using hypothesis testing rather than just a graph?
+    * What about the problem or data is suitable for this form of analysis?
+    * For a data science audience, this includes your reasoning for the changes you applied and choices you made while building confidence intervals and/or hypothesis tests.
+
 ## Data Undertanding: 
 The data set comes from several sources where some are compressed into CSV(comma-separated values) or TSV(tab-separated values). The data sets listed below are from these respectable sources: [Box Office Mojo](https://www.boxofficemojo.com/), [IMDB](https://www.imdb.com/), [Rotten Tomatoes](https://www.rottentomatoes.com/), [The MovieDB](https://www.themoviedb.org/), [The Numbers](https://www.the-numbers.com/).
 
@@ -42,15 +54,23 @@ Task: Exploring what types of films are current doing the best at the box office
 # Data Pulling and Cleaning
 Data is pulled from the csv, tsv and database files. Data is columns are renaimed to match each other. Budget and gross data is turned into a readable value by the program to create a new column called profit for each entry.
 
+# Data Organizing, Data Merging, Data Formatting, Data Calculation
 
-# 1st Visualization
+Change the column "title in the bom.movie dataframe. This will then allow us to merge both dataframes on that column.
+
+After the column name was changed we can now merge and begin our data exploration.
+
+Before we can work with the numbers in the columns we have to remove the $ and any spaces that may exist.
+
+Now we create a profit column in the dataframe and we calculate that by subtracting the "production_budget" column from the "worldwide_gross" column. It is a large number so we then divide by 1,000,000 to change it out of scientific notation.
+
+## 1st Visualization
 This graph shows the top 10 studios that have the highest profit on average. It was created by combing the two dataframes movie_gross_df and movie_budgets_df, calculating profit, and then grouping by the studio. The values are the average profit (mean).
 
 ![Image](../../images/Image_One.png)
 
 # Creating New Columns Continued
 The genre data from the database has more than one genre per movie stored. The solution was to seperate the genres and pull the first genre that appears and mark that as the primary genre.
-
 
 # Sorting data
 The data is being sorted by most profitable to least profitable. One it has been sorted the data grabs the top 10 results from the list. The top ten list is then used for vizualiation later for top ten profitable movies.
@@ -68,13 +88,67 @@ The data is merged on movie names then sorted to only include production budgets
 
 
 
-# 3rd Vizualization - Top Average Profits by Genre
+## 3rd Vizualization - Top Average Profits by Genre
 The vizualization is used to get the average profit based on genre. This data can represent which genres don't do well and what to potentially avoid. Such as making a Western movie may not produce results.
 
 ![Image](../../images/Image_Three.png)
 
 
- 
+## Data Analysis(start)
+Clean out the new dataframe gross budgets to modify the worldwide_gross and production budget values to ensure we can calculate profit. This starts by removing '$' and ',' from the cells and then converting the data into float.
+
+Clean the data again just for the frequency analysis. Since we dont need studio information, it is better that we use just the movie_budgets_df dataframe as we get better quality data in regards to profits as there isn't data lost from the merge.
+
+Calculate profits and change the vaules of profit and production budget to be represented in the millions. This is just for the movie budget dataframe.
+
+ Analysis on profit
+
+General analysis about profits. We use this dataframe because it has better data quality.
+
+count    5782.000000
+mean       59.899704
+std       146.088881
+min      -200.237650
+25%        -2.189071
+50%         8.550286
+75%        60.968502
+max      2351.345279
+Name: profit, dtype: float64
+
+## Creating histogram for profit
+
+Below we create a histogram for profit. This provides us with a general anaysis of where profit lines up for all films, generally showing us the types of returns we can expect.
+
+![Image](../../images/Image_Four.png)
+
+## Null Hypothesis:
+Typically there is no relationship between A and B. In our case, profit has no relationship to any of the top 3 occuring studios.
+
+## Alternative Hypothesis:
+The alternative hypothesis is traditionally thought of when creating a hypothesis for an experiment. In our case, profit has a relationship to all or some of the top 3 occuring studios.
+
+## General anaylsis for developing hypothesis testing
+Here we check for all unique studios in order to get an idea of all the potential studios to emulate.
+
+Check to see the total count of each studio. We are focusing on high studio frequency in the dataset to get an accurate pvalue test, as studios like Trib or FCW will not provide us with accurate results.
+
+## Hypothesis testing
+In this code we run a loop to check 3 different top occuring studios independently to see if they are significant to profit. We create a place to store the studios, and then create the loop which counts studios, sorts them by an occurrence count in decending order and then grabs the top 3 to do a p-value test independently of each other for studio and profit. One other condition we check for is if there is a null value for studio and drop it from the results.
+
+Top 3 studio occurances in the dataset significance with profit:
+Uni.: 3.688020261558896e-10
+Fox: 9.610055205557015e-17
+WB: 4.328957530102738e-10
+
+## Rejecting the null hypothesis: 
+Based on the results of each of the three studios being significant at the 95% threshold, we reject the null and accept the alternative that any of the top 3 occuring studios will help with profit.
+
+## Confidence Intervals
+Here in the code below we check the confidence interval for profit for films with a production budget under 10 million dollars.
+The 95.0% confidence interval for movie budgets under 10 million represented in millions is: (15.59, 26.02)
+
+Do the same thing as above but for films with a production budget over 10 million dollars.
+The 95.0% confidence interval for movie budgets under 10 million represented in millions is: (115.68, 142.52)
  # Middle : Methodology
 * Data Understanding
     
