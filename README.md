@@ -67,7 +67,7 @@ Now we create a profit column in the dataframe and we calculate that by subtract
 ## 1st Visualization
 This graph shows the top 10 studios that have the highest profit on average. It was created by combing the two dataframes movie_gross_df and movie_budgets_df, calculating profit, and then grouping by the studio. The values are the average profit (mean).
 
-![Image](../../images/Image_One.png)
+![Image](images/Image_One.png)
 
 # Creating New Columns Continued
 The genre data from the database has more than one genre per movie stored. The solution was to seperate the genres and pull the first genre that appears and mark that as the primary genre.
@@ -84,14 +84,14 @@ The vizualization is used to get the average profit based on genre while mantain
 
 The data is merged on movie names then sorted to only include production budgets under 10m. Once the data has been sorted the mean value for the primary genre is calculated and is sorted based on the total profit. What this produces is a dataframe with two columns. The first column is the name of the genre and the second column is the averaged profit that genre made in the past 50 years while also maintaing a budget under 10m.
 
-![Image](../../images/Image_Two.png)
+![Image](images/Image_Two.png)
 
 
 
 ## 3rd Vizualization - Top Average Profits by Genre
 The vizualization is used to get the average profit based on genre. This data can represent which genres don't do well and what to potentially avoid. Such as making a Western movie may not produce results.
 
-![Image](../../images/Image_Three.png)
+![Image](images/Image_Three.png)
 
 
 ## Data Analysis(start)
@@ -119,7 +119,7 @@ Name: profit, dtype: float64
 
 Below we create a histogram for profit. This provides us with a general anaysis of where profit lines up for all films, generally showing us the types of returns we can expect.
 
-![Image](../../images/Image_Four.png)
+![Image](images/Image_Four.png)
 
 ## Null Hypothesis:
 Typically there is no relationship between A and B. In our case, profit has no relationship to any of the top 3 occuring studios.
@@ -188,7 +188,7 @@ The scope of the task allowed only Exploratory Data Analysis(EDA) and Hypothesis
 
 
 ## PDF'S
-[Presentation](../../pdf/Top_Quality_Group_Presentation.pdf)
-[Presentation](../../pdf/Capstone_Final_Notebook_Group4_Jupyter_Notebook.pdf)
+[Presentation](pdf/Top_Quality_Group_Presentation.pdf)
+[Notebook_PDF](pdf/Capstone_Final_Notebook_Group4_Jupyter_Notebook.pdf)
 
 # End of Note book: Thank you so much for reading to this point!
