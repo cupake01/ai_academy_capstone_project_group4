@@ -46,7 +46,7 @@ Data is pulled from the csv, tsv and database files. Data is columns are renaime
 # 1st Visualization
 This graph shows the top 10 studios that have the highest profit on average. It was created by combing the two dataframes movie_gross_df and movie_budgets_df, calculating profit, and then grouping by the studio. The values are the average profit (mean).
 
-[Image_One.png](../../images)
+[1st Visualization](../../images/Image_One.png)
 
 # Creating New Columns Continued
 The genre data from the database has more than one genre per movie stored. The solution was to seperate the genres and pull the first genre that appears and mark that as the primary genre.
