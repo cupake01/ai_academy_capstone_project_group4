@@ -149,32 +149,41 @@ The 95.0% confidence interval for movie budgets under 10 million represented in 
 
 Do the same thing as above but for films with a production budget over 10 million dollars.
 The 95.0% confidence interval for movie budgets under 10 million represented in millions is: (115.68, 142.52)
- # Middle : Methodology
-* Data Understanding
-    
-* Data Analysis
-    * 3 visualizations
-* Statistical Inference
-
-* Rationale
-    * For example, why are you using hypothesis testing rather than just a graph?
-    * What about the problem or data is suitable for this form of analysis?
-    * For a data science audience, this includes your reasoning for the changes you applied and choices you made while building confidence intervals and/or hypothesis tests.
  
- 
- # End
-* Recommendations
-    * 3 reccs
-* Next Steps
-* Thank You
-* This slide should include a prompt for questions as well as your contact information (name and LinkedIn profile)
+## Conclusion
+# Business Recommendations
+When we started to work and explored data we thought it was Computing Vision's best interest to have a 2 phase recommendation. The first one being the short term phase(0-5 years) which consist of limiting capital expenditure to under 10 million dollars. As we gain familiarity of the movie industry (5-10 years in the future) and grow our entertainment portfolio, we can expand into higher grossing films such as creating movies over 10 million dollar production budget.
 
+We chose 10 million as a threshold number since we strongly believe that this is feasible capital expenditure for a tech company like Computing Vision. We also saw that 10 million is 25th percentile above and below 50th in production budget which makes it safe and retains market viability.
 
-# End of Note book
+This provides us the general statistical analysis in order to justify a 10 million dollar production budget limit for a new movie studio. This would put us above the bottom quarter but keep our movies viable with the broader film market.
 
-# Grading
-* Attention to Detail (20%)
-* Data Communication (20%)
-* Authoring Jupyter Notebooks (20%)
-* Data Manipulation and Analysis with pandas (20%)
-* Statistical Communication (20%)
+count    5.782000e+03
+mean     3.158776e+07
+std      4.181208e+07
+min      1.100000e+03
+25%      5.000000e+06
+50%      1.700000e+07
+75%      4.000000e+07
+max      4.250000e+08
+Name: production_budget, dtype: float64
+
+## 1. Short Term Reccommendation
+Make horror movies with a 10 million budget or less in the short-term. The genre itself has the highest profits on average for a budget under 10 million and also consists of 9 out of the top 10 most profitable low budget films.
+
+## 2. Growth Phase
+Branch into Sci-Fi, Adventure, and Animation Films once you are established. While these are the top profiting genres we do caution about high production budgets.
+
+## 3. Emulating A Studio
+Since we have found that they can influence profits, Emulating the right studio is a key to jumpstarting a movie studio based on our findings. The top 3 we recommend are Pixar, BV (Buena Vista International), GrtIndia
+
+## Future Works
+The scope of the task allowed only Exploratory Data Analysis(EDA) and Hypothesis Testing. We hope in the future we can use Regression and Machine Learning Algorithms to improve and validate our findings. Here are some of the example of what we would like to do in the future.
+
+1. Look into other variables that have effects on profit (Director, Revenue, Ratings)
+2. Regression testing to determine data relationships
+3. Predictive modeling with machine learning
+4. Perform thorough risk analysis for upcoming projects
+5. Risk evaluation on genres
+
+# End of Note book: Thank you so much for reading to this point!
