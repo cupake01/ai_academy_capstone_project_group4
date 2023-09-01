@@ -64,14 +64,14 @@ The vizualization is used to get the average profit based on genre while mantain
 
 The data is merged on movie names then sorted to only include production budgets under 10m. Once the data has been sorted the mean value for the primary genre is calculated and is sorted based on the total profit. What this produces is a dataframe with two columns. The first column is the name of the genre and the second column is the averaged profit that genre made in the past 50 years while also maintaing a budget under 10m.
 
-![image-4.png](attachment:image-4.png)
+![Image](../../images/Image_Two.png)
 
 
 
 # 3rd Vizualization - Top Average Profits by Genre
 The vizualization is used to get the average profit based on genre. This data can represent which genres don't do well and what to potentially avoid. Such as making a Western movie may not produce results.
 
-![image-3.png](attachment:image-3.png)
+![Image](../../images/Image_Three.png)
 
 
  
